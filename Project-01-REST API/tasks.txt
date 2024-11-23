@@ -1,0 +1,18 @@
+Create REST API JSON
+
+GET /users -> List all users (HTML Document Render)
+GET /api/users -> List all users in Json Format if our client is mobile app, alexa or any other application except browser.
+GET /api/users/1 - Get the user with ID 1.
+GET /api/users/2 - Get the user with ID 2. (Dynamic Data)
+
+Dynamic Path Parameters declare in below format :
+GET /api/users/:id
+
+:id -> Variable | Dynamic
+
+POST /api/users - Create new user
+
+PATCH /api/users/1 - Edit the user with id 1
+
+DELETE /api/users/1 - Delete the user with id 1
+

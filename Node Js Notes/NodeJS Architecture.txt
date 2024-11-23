@@ -1,0 +1,23 @@
+-> Single-Threaded Model:
+1. Single Thread: Node.js runs on a single thread in the main execution environment. This means it doesn't spawn new threads for each request like some traditional servers (e.g., Apache).
+2. Non-Blocking I/O: Instead of handling each request with a new thread, Node.js uses non-blocking, asynchronous I/O operations. This allows it to start an I/O task and move on to the next request without waiting for the first to complete.
+3. Efficiency with Lightweight Requests: Because of the single-threaded nature, Node.js is very memory-efficient for handling a large number of simultaneous, lightweight (non-blocking) requests.
+
+-> Event Loop
+1. The Role of the Event Loop: The event loop is at the core of Node.js’s concurrency model. It continuously monitors the event queue for new incoming tasks, checking if there’s a request or operation to process.
+2. Handling Tasks: When a request comes in, the event loop picks it up. If the request is asynchronous (e.g., a database call or file read operation), Node.js hands off the task to a non-blocking, background operation and moves on to check for the next task. When the asynchronous operation completes, its callback is placed back in the event queue, where the event loop will eventually handle it.
+
+-> How It Manages Concurrency:
+1. Non-Blocking Nature: The event loop allows Node.js to manage concurrency without creating multiple threads. Instead, it offloads heavy or blocking tasks to the background or a thread pool (like in the case of file system or network requests).
+2. Scalability: Because of this model, Node.js can handle thousands of requests simultaneously without needing multiple threads, making it highly scalable for I/O-bound applications like web servers or API endpoints.
+
+
+SOCKET : 
+A socket is a combination of an IP address and port number. It provides the endpoint for sending and receiving data over a network.In networking, an endpoint refers to one side of a communication channel, where data can be sent or received. An endpoint is typically defined by two main components:
+1. IP Address: Identifies the device on the network.
+2. Port Number: Identifies the specific service or application on that device.
+
+npm javascript : search package on this website that we can use on our server. https://www.npmjs.com/
+To install any npm package : npm i <package_name> or npm install <package_name>. Whenever user install any npm package then it creates entry in 'dependencies' key present inside package.json module. So by chance if you delete the package then again run 'npm install' then it check package under dependencies and if it is found then it will install it again.
+Note : Whenever we are using any package then it first searches inside package.json file and then it searches in its inbuilt packages lists.
+

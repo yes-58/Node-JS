@@ -1,0 +1,22 @@
+Why Express JS?
+1. Simplifies HTTP Request Handling
+Without Express, managing HTTP requests in Node.js requires a lot of manual setup, including handling URL parsing, headers, query parameters, and more. Express provides methods like app.get(), app.post(), and others, to handle requests cleanly and efficiently.
+2. Streamlined Routing
+Express includes a powerful routing system that lets you define routes for handling various HTTP methods and URL paths. This allows for better organization, especially in complex applications where multiple endpoints need to be managed.
+javascript
+app.get('/user', (req, res) => res.send('User page'));
+app.post('/user', (req, res) => res.send('Create user'));
+
+3.Middleware Support
+Middleware in Express lets you add custom logic in the request-response cycle, such as logging, authentication, error handling, and data parsing. Middleware functions can be stacked and reused, making it easy to build modular applications.
+app.use(express.json()); // Built-in middleware to parse JSON payloads
+
+4.Template Engines for Dynamic Content
+Express integrates easily with template engines like EJS, Pug, and Handlebars. These engines allow you to render dynamic HTML content, making it ideal for applications that need to display variable data in the UI.
+app.set('view engine', 'ejs'); // Setting EJS as the template engine
+
+5.Building APIs and Microservices
+Express provides a minimalistic yet powerful foundation for creating RESTful APIs and microservices. This is especially useful in modern web applications where the frontend and backend are decoupled, and APIs are needed for communication.
+
+6. Large Ecosystem and Community Support
+Express has a vast ecosystem with a large number of third-party libraries and middleware options that extend its functionality, covering everything from authentication and security to data validation and error handling.
