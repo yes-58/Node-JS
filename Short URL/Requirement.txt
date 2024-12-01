@@ -1,0 +1,9 @@
+URL Shortener Application
+
+-> Design a URL Shortner service that takes in a valid URL and returns a shortened URL, redirecting the user to the previously provided URL.
+-> Also keeps track of total visits/clicks on the URL.
+
+-> Routes
+POST /url : Generates a new short url and returns the shortened URL in the format example.com/random_id.
+GET /:id : Redirects the user to the original URL.
+GET /url/analytics/:id : returns the click for the provided short id.
